@@ -8,8 +8,7 @@ local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shl
 local Window = OrionLib:MakeWindow({Name = "Miku Hub", HidePremium = false,IntroText = "Miku Hub", SaveConfig = true, ConfigFolder = "Miku Hub"})
 
 
-Notify("Welcome To Miku Hub Release",5)
-Notify("Thank for use",5)
+
 
 local I = Window:MakeTab({
 	Name = "Info",
