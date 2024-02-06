@@ -961,6 +961,16 @@ G:AddToggle({
 
 -- Item & Quest :
 
+IQ:AddToggle({
+	Name = "Auto Saber",
+	Default = false,
+	Callback = function(Value)
+		_G.AutoSaber = Value
+	end    
+})
+
+
+
 -- Teleport :
 
 local Section = TL:AddSection({
@@ -1423,13 +1433,7 @@ task.spawn(function()
     end
 end)
 
-G:AddToggle({
-	Name = "Auto Saber",
-	Default = false,
-	Callback = function(Value)
-		AutoSaber = Value;
-	end
-});
+
 spawn(function()
 	while task.wait() do
 		if AutoSaber and game.Players.LocalPlayer.Data.Level.Value >= 200 and (not (game:GetService("Players")).LocalPlayer.Backpack:FindFirstChild("Saber")) and (not game.Players.LocalPlayer.Character:FindFirstChild("Saber")) then
